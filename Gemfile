@@ -8,6 +8,7 @@ end
 
 
 gem 'rails', '~> 5.1.6'
+gem 'bcrypt'
 gem 'bootstrap-sass'
 gem 'sqlite3'
 gem 'puma', '~> 3.7'
