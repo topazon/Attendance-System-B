@@ -11,6 +11,8 @@ gem 'rails', '~> 5.1.6'
 gem 'bcrypt'
 gem 'faker'
 gem 'bootstrap-sass'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 gem 'sqlite3'
 gem 'puma', '~> 3.7'
 gem 'sassc-rails'
@@ -19,6 +21,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
+gem 'data-confirm-modal'
 
 
 group :development, :test do
