@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     member do
       get 'edit_basic_info'
       patch 'update_basic_info'
-    resources :attendances
     end
+    resources :attendances, only: :update
   end
 end
