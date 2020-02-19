@@ -25,7 +25,7 @@
 </div>
 
 <div class="btn-user-edit">
-  <%= link_to "勤怠を編集", "#", class: "btn btn-info" %>
+  <%= link_to "勤怠を編集", attendances_edit_one_month_user_path(date: @first_day), class: "btn btn-info" %>
 </div>
 
 <div>
@@ -53,7 +53,9 @@
       <% @attendances.each do |day| %>
         <tr>
           <td><%= l(day.worked_on, format: :short) %></td>
-          <td><%= $days_of_the_week[day.worked_on.wday] %></td>
+          <td>
+            <%= $days_of_the_week[day.worked_on.wday] %>
+          </td>
           <td><%= l(day.started_at, format: :hour) if day.started_at.present? %></td>
           <td><%= l(day.started_at, format: :miniute) if day.started_at.present? %></td>
           <td>
@@ -74,7 +76,7 @@
               <% @total_working_times = @total_working_times.to_f + str_times.to_f %>
             <% end %>
           </td>
-          <td></td>
+          <td><%= day.note %></td>
         </tr>
       <% end %>
     </tbody>
